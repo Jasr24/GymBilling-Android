@@ -21,7 +21,6 @@ class HomeMainPresenter @Inject constructor(
 
     override fun load() {
         fragment = (view as HomeMainFragment)
-        (fragment?.activity as? HomeActivity)?.setBackgroundImage(R.color.white)
     }
 
     override fun goToSection(idSection: Int) {

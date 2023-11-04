@@ -1,5 +1,7 @@
 <resources>
 
+    <string name="developer">Ⓓ Desarrollado por José Andres Saavedra Romero</string>
+
     <!--Mensajes de error-->
     <string name="we_are_sorry">¡Lo sentimos!</string>
     <string name="ups_error">¡Upss!</string>

@@ -5,8 +5,14 @@
     <dimen name="text_size_default">16sp</dimen>
     <dimen name="text_size_header">24sp</dimen>
 
+    <dimen name="height_header">65dp</dimen>
+    <dimen name="height_footer">65dp</dimen>
     <!--Dimen in dp-->
+    <dimen name="dimen3dp">3dp</dimen>
+    <dimen name="dimen5dp">5dp</dimen>
+    <dimen name="dimen10dp">10dp</dimen>
     <dimen name="dimen20dp">20dp</dimen>
+    <dimen name="dimen35dp">35dp</dimen>
     <dimen name="dimen250dp">250dp</dimen>
 
 </resources>

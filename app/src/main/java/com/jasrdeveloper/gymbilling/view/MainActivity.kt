@@ -32,9 +32,6 @@ abstract class MainActivity<V : BaseView, P : BasePresenter<V>> : BaseActivity<V
         binding.acmMainHeader.visibility = View.VISIBLE
         binding.actMFrmMain.visibility = View.VISIBLE
 
-        if(containerViewConfig.showTitle)
-            binding.flmHomeTitle.text = containerViewConfig.title
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,17 +61,13 @@ abstract class MainActivity<V : BaseView, P : BasePresenter<V>> : BaseActivity<V
     }
 
     private fun listeners(){
-        binding.flmIvBackOption.setOnClickListener {
+        binding.flmImgBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
     }
 
     fun goActivity(id: Int): Boolean{
         return toFlow(id)
-    }
-
-    fun setBackgroundImage(imageId: Int) {
-        binding.acmIvBackground.setImageDrawable(ResourcesCompat.getDrawable(resources, imageId, null))
     }
 
     private fun toFlow(activityCode: Int):Boolean{
