@@ -1,0 +1,9 @@
+<resources>
+
+    <!--Mensajes de error-->
+    <string name="we_are_sorry">¡Lo sentimos!</string>
+    <string name="ups_error">¡Upss!</string>
+    <string name="logical_error">¡Ocurrió un error!.\nPor favor contáctate con el administrador del sistema</string>
+    <string name="servidor_error">Hubo un error.\nPor favor revisa tu conexión y vuelve a intentarlo</string>
+
+</resources>
