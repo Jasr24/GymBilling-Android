@@ -1,5 +1,7 @@
 package com.jasrdeveloper.gymbilling.presenter.home
 
+import android.view.View
+import android.widget.ImageView
 import com.jasrdeveloper.gymbilling.R
 import com.jasrdeveloper.gymbilling.contract.home.HomeActivityContract
 import com.jasrdeveloper.gymbilling.presenter.common.BasePresenter
@@ -16,6 +18,13 @@ class HomeActivityPresenter:
     private lateinit var dataConsult: Number
     override var activity: HomeActivity? = null
     override val resourceActivity: Int = R.id.actHome_frmLayout
+
+    override fun load() {
+        activity!!.findViewById<ImageView>(R.id.flm_imgBack).visibility = View.GONE
+        activity!!.findViewById<ImageView>(R.id.am_img_home).visibility = View.GONE
+        activity!!.findViewById<ImageView>(R.id.am_img_logout).visibility = View.GONE
+        activity!!.findViewById<ImageView>(R.id.am_img_menu).visibility = View.GONE
+    }
 
     override fun onCreateHomeMainFragment() {
         activity = (view as HomeActivity)

@@ -10,6 +10,7 @@ interface HomeActivityContract {
     }
 
     interface Presenter {
+        fun load()
         fun onCreateHomeMainFragment()
     }
 

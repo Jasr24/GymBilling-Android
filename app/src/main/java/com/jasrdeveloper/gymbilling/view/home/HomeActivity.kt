@@ -28,6 +28,7 @@ class HomeActivity :
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         homePresenterActivity.onCreateHomeMainFragment()
+        homePresenterActivity.load()
         setBackPressed()
     }
 

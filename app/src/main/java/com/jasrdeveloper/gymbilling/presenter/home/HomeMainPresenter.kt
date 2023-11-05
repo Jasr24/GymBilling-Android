@@ -1,9 +1,7 @@
 package com.jasrdeveloper.gymbilling.presenter.home
 
-import com.jasrdeveloper.gymbilling.R
 import com.jasrdeveloper.gymbilling.contract.home.HomeMainContract
 import com.jasrdeveloper.gymbilling.presenter.common.BaseFragmentPresenter
-import com.jasrdeveloper.gymbilling.view.home.HomeActivity
 import com.jasrdeveloper.gymbilling.view.home.HomeMainFragment
 import javax.inject.Inject
 
