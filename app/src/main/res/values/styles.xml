@@ -33,9 +33,16 @@
         <item name="android:paddingStart">@dimen/dimen20dp</item>
     </style>
 
+    <style name="AppTheme.etLoginWidget">
+        <item name="android:layout_height">@dimen/height_edittext</item>
+        <item name="android:background">@drawable/round_background</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
     <style name="AppTheme.btnDefaultWidget">
         <item name="android:layout_width">120dp</item>
-        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:background">@drawable/background_button</item>
         <item name="android:elevation">0dp</item>
         <item name="android:textColor">@color/white</item>

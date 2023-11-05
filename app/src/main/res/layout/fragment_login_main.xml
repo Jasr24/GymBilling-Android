@@ -3,23 +3,89 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tv_login_title"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:gravity="center"
-        android:text="Hola mundo"
-        android:textColor="#3A3A3A"
-        android:textSize="18sp"
-        android:singleLine="true"
-        android:focusable="false"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen20dp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen150dp"
+                android:layout_marginTop="@dimen/dimen20dp"
+                android:gravity="center"
+                android:src="@drawable/ic_user" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@color/blue_dark"
+                android:text="@string/login"/>
+
+            <EditText
+                android:id="@+id/flm_edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50dp"
+                style="@style/AppTheme.etLoginWidget"
+                android:layout_marginTop="@dimen/dimen65dp"
+                android:gravity="center"
+                android:inputType="textEmailAddress"
+                android:hint="@string/user_login"/>
+
+            <EditText
+                android:id="@+id/flm_edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50dp"
+                style="@style/AppTheme.etLoginWidget"
+                android:layout_marginTop="@dimen/dimen35dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="@string/password"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/dimen30dp"
+                android:gravity="center"
+                android:src="@drawable/logo_gymcamp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen25dp"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:textColor="@color/blue_dark"
+                android:text="@string/forgot_password"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/flm_btlogin"
+                style="@style/AppTheme.btnDefaultWidget"
+                android:text="@string/login"
+                android:layout_marginBottom="@dimen/dimen35dp"
+                android:layout_marginTop="@dimen/dimen20dp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,8 @@ interface LoginActivityContract {
     }
 
     interface Presenter {
+        fun load()
+        fun listeners()
         fun onCreateLoginMainFragment()
     }
 }

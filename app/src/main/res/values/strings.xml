@@ -7,6 +7,11 @@
     <string name="accept">Aceptar</string>
     <string name="number_document">Número identificación</string>
 
+    <!--Login-->
+    <string name="user_login">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_password">Olvido su contraseña</string>
+
     <!--Mensajes de error-->
     <string name="we_are_sorry">¡Lo sentimos!</string>
     <string name="ups_error">¡Upss!</string>

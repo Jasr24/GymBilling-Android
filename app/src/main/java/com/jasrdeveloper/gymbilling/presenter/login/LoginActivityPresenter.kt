@@ -1,6 +1,10 @@
 package com.jasrdeveloper.gymbilling.presenter.login
 
 import android.content.Intent
+import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.jasrdeveloper.gymbilling.R
 import com.jasrdeveloper.gymbilling.contract.login.LoginActivityContract
 import com.jasrdeveloper.gymbilling.presenter.common.BasePresenter
@@ -16,7 +20,17 @@ class LoginActivityPresenter() :BasePresenter<LoginActivityContract.View>(),
         LoginActivityContract.Presenter
 {
     override var activity: LoginActivity? = null
-    override val resourceActivity: Int = R.id.actHome_frmLayout
+    override val resourceActivity: Int = R.id.actLogin_frmLayout
+
+    override fun load() {
+        activity!!.findViewById<ConstraintLayout>(R.id.acm_main_header).visibility = View.GONE
+        listeners()
+    }
+
+    override fun listeners() {
+
+    }
+
     override fun onCreateLoginMainFragment() {
        activity = (view as LoginActivity)
        val fragment = LoginMainFragment().createInstance(
