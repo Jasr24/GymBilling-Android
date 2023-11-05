@@ -12,6 +12,7 @@ interface LoginMainContract {
 
     interface FragmentPresenter {
         var fragment: LoginMainFragment?
+        fun listener()
     }
 
     interface InteractorInput {

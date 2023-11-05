@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jasrdeveloper.gymbilling.R
 import com.jasrdeveloper.gymbilling.contract.login.LoginMainContract
+import com.jasrdeveloper.gymbilling.databinding.FragmentLoginMainBinding
 import com.jasrdeveloper.gymbilling.presenter.login.LoginMainPresenter
 import com.jasrdeveloper.gymbilling.view.common.base_fragment.BaseFragment
 import com.jasrdeveloper.gymbilling.view.common.base_fragment.BaseFragmentCallback
@@ -23,6 +23,8 @@ LoginMainContract.View, BaseFragmentOnBackPressed {
     override val fragmentContext: Context get() = parentActivityContext
 
     override fun getFragmentView(): LoginMainContract.View = this
+    private var _binding: FragmentLoginMainBinding? = null
+    val binding get() = _binding!!
     override fun createPresenter(): LoginMainPresenter = loginMainPresenter
 
     override fun onCreateView(
@@ -31,7 +33,8 @@ LoginMainContract.View, BaseFragmentOnBackPressed {
         savedInstanceState: Bundle?
     ): View? {
         injectorBaseFragment().injectFragment(this)
-        return inflater.inflate(R.layout.fragment_login_main, container, false)
+        _binding = FragmentLoginMainBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun <T> createInstance(

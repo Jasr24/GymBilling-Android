@@ -19,5 +19,12 @@ class LoginMainPresenter @Inject constructor():
 
     override fun load() {
         fragment = (view as LoginMainFragment)
+        listener()
+    }
+
+    override fun listener() {
+        fragment!!.binding.flmBtCancel.setOnClickListener{
+            fragment!!.getFragmentCallback().onFragmentSuccess(1, null)
+        }
     }
 }

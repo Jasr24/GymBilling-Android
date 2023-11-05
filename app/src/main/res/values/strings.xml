@@ -11,6 +11,7 @@
     <string name="user_login">Correo electrónico</string>
     <string name="password">Contraseña</string>
     <string name="forgot_password">Olvido su contraseña</string>
+    <string name="cancel">Cancelar</string>
 
     <!--Mensajes de error-->
     <string name="we_are_sorry">¡Lo sentimos!</string>

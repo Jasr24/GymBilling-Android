@@ -77,8 +77,14 @@
                 android:id="@+id/flm_btlogin"
                 style="@style/AppTheme.btnDefaultWidget"
                 android:text="@string/login"
-                android:layout_marginBottom="@dimen/dimen35dp"
                 android:layout_marginTop="@dimen/dimen20dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/flm_btCancel"
+                style="@style/AppTheme.btnCancelWidget"
+                android:text="@string/cancel"
+                android:layout_marginBottom="@dimen/dimen35dp"
+                android:layout_marginTop="@dimen/dimen10dp"/>
 
         </LinearLayout>
 
