@@ -1,5 +1,6 @@
 package com.jasrdeveloper.gymbilling.presenter.home
 
+import android.content.Intent
 import android.view.View
 import android.widget.ImageView
 import com.jasrdeveloper.gymbilling.R
@@ -9,13 +10,13 @@ import com.jasrdeveloper.gymbilling.view.common.base_fragment.BaseFragmentCallba
 import com.jasrdeveloper.gymbilling.view.common.base_fragment.BaseFragmentNavigation
 import com.jasrdeveloper.gymbilling.view.home.HomeActivity
 import com.jasrdeveloper.gymbilling.view.home.HomeMainFragment
+import com.jasrdeveloper.gymbilling.view.login.LoginActivity
 
 class HomeActivityPresenter:
     BasePresenter<HomeActivityContract.View>(),
     BaseFragmentNavigation<HomeActivity>,
     HomeActivityContract.Presenter {
 
-    private lateinit var dataConsult: Number
     override var activity: HomeActivity? = null
     override val resourceActivity: Int = R.id.actHome_frmLayout
 
@@ -33,17 +34,21 @@ class HomeActivityPresenter:
             dataFragment = null,
             fragmentCallback = object: BaseFragmentCallback {
                 override fun <T> onFragmentSuccess(actionCode: Int, data: T?) {
-                    when(actionCode){
+                    val context = activity
+                    if (context != null) {
+                        val intent = Intent(context, LoginActivity::class.java)
+                        context.startActivity(intent)
+                        context.finish()
                     }
                 }
 
                 override fun onFragmentFailure() {
-                    TODO("Not yet implemented")
+                    //TODO("Not yet implemented")
                 }
             }
         )
         activity!!.containerViewConfig(fragment.viewContainerConfig()!!)
-        addFragment(fragment)
+        replaceFragment(fragment)
     }
 
 }

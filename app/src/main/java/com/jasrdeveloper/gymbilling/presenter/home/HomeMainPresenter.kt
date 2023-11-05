@@ -19,8 +19,14 @@ class HomeMainPresenter @Inject constructor(
 
     override fun load() {
         fragment = (view as HomeMainFragment)
+        listeners()
     }
 
+    override fun listeners() {
+        fragment!!.binding.flmBtlogin.setOnClickListener{
+            fragment!!.getFragmentCallback().onFragmentSuccess(0, null)
+        }
+    }
     override fun goToSection(idSection: Int) {
 
     }

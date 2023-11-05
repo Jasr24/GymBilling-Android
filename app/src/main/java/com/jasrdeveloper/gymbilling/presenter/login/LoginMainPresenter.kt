@@ -2,7 +2,7 @@ package com.jasrdeveloper.gymbilling.presenter.login
 
 import com.jasrdeveloper.gymbilling.contract.login.LoginMainContract
 import com.jasrdeveloper.gymbilling.presenter.common.BaseFragmentPresenter
-import com.jasrdeveloper.gymbilling.view.home.HomeMainFragment
+import com.jasrdeveloper.gymbilling.view.login.LoginMainFragment
 import javax.inject.Inject
 
 
@@ -11,13 +11,13 @@ class LoginMainPresenter @Inject constructor():
     LoginMainContract.FragmentPresenter,
     LoginMainContract.InteractorOutput  {
 
-    override var fragment: HomeMainFragment? = null
+    override var fragment: LoginMainFragment? = null
 
     init {
+
     }
 
     override fun load() {
-        fragment = (view as HomeMainFragment)
-        //TODO: pendiente implementar flujo
+        fragment = (view as LoginMainFragment)
     }
 }

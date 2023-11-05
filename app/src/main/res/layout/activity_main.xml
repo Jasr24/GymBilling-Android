@@ -110,6 +110,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:id="@+id/am_txv_portafolio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"

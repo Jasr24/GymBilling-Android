@@ -60,6 +60,7 @@ LoginMainContract.View, BaseFragmentOnBackPressed {
     }
 
     override fun onBackPressed(): Boolean {
-        TODO("Not yet implemented")
+        getFragmentCallback().onFragmentSuccess(1, null)
+        return false
     }
 }

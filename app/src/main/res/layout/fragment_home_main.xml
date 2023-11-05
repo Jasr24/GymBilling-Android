@@ -39,6 +39,7 @@
                     android:layout_height="@dimen/dimen30dp"
                     style="@style/AppTheme.etDefaultWidget"
                     android:layout_marginEnd="@dimen/dimen10dp"
+                    android:inputType="number"
                     android:hint="@string/number_document"/>
 
                 <androidx.appcompat.widget.AppCompatButton

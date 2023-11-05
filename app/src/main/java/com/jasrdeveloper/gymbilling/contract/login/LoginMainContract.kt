@@ -3,6 +3,7 @@ package com.jasrdeveloper.gymbilling.contract.login
 import android.content.Context
 import com.jasrdeveloper.gymbilling.view.common.components.BaseView
 import com.jasrdeveloper.gymbilling.view.home.HomeMainFragment
+import com.jasrdeveloper.gymbilling.view.login.LoginMainFragment
 
 interface LoginMainContract {
     interface View : BaseView {
@@ -10,7 +11,7 @@ interface LoginMainContract {
     }
 
     interface FragmentPresenter {
-        var fragment: HomeMainFragment?
+        var fragment: LoginMainFragment?
     }
 
     interface InteractorInput {

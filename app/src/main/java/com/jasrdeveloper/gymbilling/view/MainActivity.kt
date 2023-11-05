@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
@@ -15,6 +16,7 @@ import com.jasrdeveloper.gymbilling.view.common.components.BaseActivity
 import com.jasrdeveloper.gymbilling.view.common.components.BaseView
 import com.jasrdeveloper.gymbilling.view.common.components.ContainerViewConfigProperties
 import com.jasrdeveloper.gymbilling.view.common.components.custom_dialog_spinner_load.CustomDialogSpinnerLoad
+import com.jasrdeveloper.gymbilling.view.login.LoginActivity
 
 
 abstract class MainActivity<V : BaseView, P : BasePresenter<V>> : BaseActivity<V, P>() {
@@ -38,6 +40,7 @@ abstract class MainActivity<V : BaseView, P : BasePresenter<V>> : BaseActivity<V
         spinnerDialog = CustomDialogSpinnerLoad().create(this)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        parentActivityContext = this
     }
 
     @SuppressLint("InflateParams")
@@ -64,6 +67,45 @@ abstract class MainActivity<V : BaseView, P : BasePresenter<V>> : BaseActivity<V
         binding.flmImgBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
+
+        binding.amImgLogin.setOnClickListener {
+            val context = parentActivityContext
+            if (context != null) {
+                val intent = Intent(context, LoginActivity::class.java)
+                context.startActivity(intent)
+            }
+        }
+
+        binding.amTxvPortafolio.setOnClickListener{
+            val url = "https://jasr24.github.io/portafolio/"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+
+        binding.amImgLinkedin.setOnClickListener {
+            val url = "https://www.linkedin.com/in/jose-andres-saavedra-romero-desarrollador-mobile"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+
+        binding.amImgGithub.setOnClickListener {
+            val url = "https://github.com/Jasr24"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+
+        binding.amImgX.setOnClickListener {
+            val url = "https://twitter.com/JarsGamer/likes"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+
+        binding.amImgEmail.setOnClickListener {
+            val url = "mailto:josex.1995@hotmail.com"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
+
     }
 
     fun goActivity(id: Int): Boolean{

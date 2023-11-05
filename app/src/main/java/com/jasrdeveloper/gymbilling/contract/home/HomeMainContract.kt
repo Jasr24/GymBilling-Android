@@ -13,6 +13,7 @@ interface HomeMainContract {
     interface FragmentPresenter {
         var fragment: HomeMainFragment?
         fun goToSection(idSection:Int)
+        fun listeners()
     }
 
     interface InteractorInput {
